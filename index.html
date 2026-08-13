@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polynumb</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">
+    New game updates are coming soon — follow the development and join the community.
+  </div>
+
+  <header>
+    <div class="header-main">
+<a href="#home" class="logo" data-page="home">POLYNUMB</a>
+</div>
+
+    <nav>
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="about">About</button>
+      <button class="nav-link" data-page="updates">Updates</button>
+      <button class="nav-link" data-page="community">Community</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="page active-page">
+      <div class="page-heading">
+        <h1>Current Projects</h1>
+        <p>Games I'm currently building. Follow the development and download the latest playable versions.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-image placeholder drift-bg">
+            <!-- Later replace this placeholder with:
+            <img src="images/poly-drifters.jpg" alt="Poly Drifters">
+            Recommended artwork: 1600 × 900 or 1920 × 1080 (16:9).
+            -->
+            <span>POLY DRIFTERS</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="status">IN DEVELOPMENT</span>
+              <h2>Poly Drifters</h2>
+              <p>A mobile RC drifting game focused on smooth physics, progression and competitive driving.</p>
+            </div>
+            <a class="download-btn"
+   href="https://www.mediafire.com/file/nyx7txx3ul9268d/polydrifters_build_no44.zip/file"
+   target="_blank">
+    Download Latest Build <span>↓</span>
+</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image placeholder football-bg">
+            <!-- Later replace this placeholder with:
+            <img src="images/football.jpg" alt="Football Project">
+            Recommended artwork: 1600 × 900 or 1920 × 1080 (16:9).
+            -->
+            <span>FOOTBALL</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="status">IN DEVELOPMENT</span>
+              <h2>Football Project</h2>
+              <p>A football game I'm building from the ground up with custom player AI, animations and match systems.</p>
+            </div>
+            <a class="download-btn secondary" href="https://www.mediafire.com/file/nyx7txx3ul9268d/polydrifters_build_no44.zip/file" onclick="downloadGame(event, 'Football Project')">Latest Build <span>↓</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="home-note">
+        <span class="note-mark">+</span>
+        <div>
+          <h3>Follow the development</h3>
+          <p>New builds, features and development news will be posted here. Check the Updates page for the latest progress.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <div class="page-heading">
+        <h1>About</h1>
+        <p>Independent game development, experiments and projects.</p>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-copy">
+          <span class="eyebrow">THE DEVELOPER</span>
+          <h2>Building games from the ground up.</h2>
+          <p>
+            I'm an independent developer working on passion game projects,
+            experimenting with physics, gameplay systems and everything
+            else that goes into making a game.
+          </p>
+          <p>
+            This website is the central place for development updates,
+            playable builds and news about the projects I'm working on.
+          </p>
+        </div>
+
+        <div class="about-box">
+          <div class="stat"><strong>02+</strong><span>Projects</span></div>
+          <div class="stat"><strong>∞</strong><span>Ideas</span></div>
+          <div class="stat"><strong>100%</strong><span>Independent</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPDATES -->
+    <section id="updates" class="page">
+      <div class="page-heading">
+        <h1>Development Updates</h1>
+        <p>News, progress reports and new features from the games I'm building.</p>
+      </div>
+
+      <div class="updates-list">
+        <article class="update-card">
+          <div class="update-date">AUG 13, 2026</div>
+          <div class="update-content">
+            <span class="eyebrow">POLY DRIFTERS</span>
+            <h2>AI drivers are being developed</h2>
+            <p>
+              I'm currently building the first AI driving system. The goal is
+              to create drivers that can follow different tracks, understand
+              corners and eventually drift using the same physics as the player.
+            </p>
+          </div>
+        </article>
+
+        <article class="update-card">
+          <div class="update-date">RECENT</div>
+          <div class="update-content">
+            <span class="eyebrow">DEVELOPMENT</span>
+            <h2>Core drifting physics are working</h2>
+            <p>
+              The car now has custom suspension, tire forces, steering and a
+              smooth rear-grip based drifting system.
+            </p>
+          </div>
+        </article>
+
+        <!-- Copy this block whenever you want to add another update. -->
+        <article class="update-card">
+          <div class="update-date">COMING SOON</div>
+          <div class="update-content">
+            <span class="eyebrow">NEXT</span>
+            <h2>More updates soon</h2>
+            <p>
+              New gameplay systems, builds and development videos will be
+              posted here as the projects progress.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="page">
+      <div class="page-heading">
+        <h1>Community</h1>
+        <p>Join the community, follow the development and support the games I am building.</p>
+      </div>
+
+      <div class="community-links">
+        <a class="community-link" href="#" target="_blank" rel="noopener">
+          <div><strong>YouTube</strong><small>Development videos and game updates</small></div><span>↗</span>
+        </a>
+        <a class="community-link" href="#" target="_blank" rel="noopener">
+          <div><strong>Discord</strong><small>Join the community and follow development</small></div><span>↗</span>
+        </a>
+      </div>
+
+      <div class="supporters">
+        <div class="supporters-heading">
+          <span class="eyebrow">THANK YOU!🏆</span>
+          <h2>Community Supporters</h2>
+          <p>Thank you to everyone in the Discord community for the support.</p>
+        </div>
+        <div class="members-list">
+          <div class="member">01. BlueMoun 🍠 c00l</div>
+          <div class="member">02. CHANCE ⚔️ UBI</div>
+          <div class="member">03. [JKF] JoKeR~L ⚡️ SLOW</div>
+          <div class="member">04. Anderson</div>
+          <div class="member">05. Araiz 🏆 NL2</div>
+          <div class="member">06. BARCAFAN 2468</div>
+          <div class="member">07. DAL_SAHAB</div>
+          <div class="member">08. Darshil Upadhyay</div>
+          <div class="member">09. Dawson</div>
+          <div class="member">10. Dexter</div>
+          <div class="member">11. Dipankar</div>
+          <div class="member">12. DOMES GAME ZX</div>
+          <div class="member">13. Eljefejl 💀 H2</div>
+          <div class="member">14. GamerG ⚡️ FRZA</div>
+          <div class="member">15. GamerKid</div>
+          <div class="member">16. Giovanny5262</div>
+          <div class="member">17. Itx_Mustafa🕷️ (15+ VOUCHES)</div>
+          <div class="member">18. JESÚS ALEXIS</div>
+          <div class="member">19. Johnathan vrey 🦁 KSI</div>
+          <div class="member">20. Just a car guy</div>
+          <div class="member">21. Kingslayer32214</div>
+          <div class="member">22. PAVAN</div>
+          <div class="member">23. Ricky66 🦊 CARS</div>
+          <div class="member">24. Rousstech 💚 tox2</div>
+          <div class="member">25. sam</div>
+          <div class="member">26. Simulator Game Xiao Beibei</div>
+          <div class="member">27. SL1d3y bo1</div>
+          <div class="member">28. Squigglebob</div>
+          <div class="member">29. VELOCITY VIPER</div>
+          <div class="member">30. vinchi</div>
+          <div class="member">31. vortex_chan 💜 MEOW</div>
+          <div class="member">32. *MS GAMESTRON* ™️ 🤍</div>
+          <div class="member">33. SavageJack</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">POLYNUMB</div>
+    <p>Independent game development.</p>
+    <div class="footer-links">
+      <button data-page="home">Home</button>
+      <button data-page="about">About</button>
+      <button data-page="updates">Updates</button>
+      <button data-page="community">Community</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
