@@ -1,46 +1,33 @@
-const navLinks = document.querySelectorAll("[data-page]");
-const pages = document.querySelectorAll(".page");
+const pages = document.querySelectorAll('.page');
+const pageControls = document.querySelectorAll('[data-page]');
 
 function showPage(pageId) {
-  pages.forEach(page => {
-    page.classList.toggle("active-page", page.id === pageId);
+  const selectedPage = document.getElementById(pageId);
+  if (!selectedPage) return;
+
+  pages.forEach((page) => {
+    page.classList.toggle('active-page', page.id === pageId);
   });
 
-  navLinks.forEach(link => {
-    link.classList.toggle(
-      "active",
-      link.dataset.page === pageId && link.classList.contains("nav-link")
-    );
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    link.classList.toggle('active', link.dataset.page === pageId);
   });
 
-  history.replaceState(null, "", "#" + pageId);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-navLinks.forEach(link => {
-  link.addEventListener("click", event => {
+pageControls.forEach((control) => {
+  control.addEventListener('click', (event) => {
+    const pageId = control.dataset.page;
+    if (!pageId) return;
     event.preventDefault();
-    showPage(link.dataset.page);
+    showPage(pageId);
   });
 });
 
-function loadInitialPage() {
-  const page = window.location.hash.replace("#", "");
-  const valid = ["home", "about", "updates", "community"];
-  showPage(valid.includes(page) ? page : "home");
-}
-
 function downloadGame(event, gameName) {
   event.preventDefault();
-
-  // Replace the alert below with your real download URL.
-  // Example:
-  // window.location.href = "downloads/rc-drift-v0.2.apk";
-
-  alert(
-    `${gameName}: Add your real download link in script.js or directly on the download button.`
-  );
+  alert(`${gameName}: no download has been added yet.`);
 }
 
-window.addEventListener("hashchange", loadInitialPage);
-loadInitialPage();
+showPage('home');

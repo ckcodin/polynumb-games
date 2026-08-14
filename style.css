@@ -487,3 +487,20 @@ footer p {
   }
 }
 \n\n/* POLYNUMB wordmark */\n.logo,\n.footer-logo {\n  font-family: "Arial Black", Arial, Helvetica, sans-serif;\n  font-weight: 900;\n  font-style: italic;\n  letter-spacing: -4px;\n  transform: skew(-10deg);\n}\n\n/* Project art: fixed 16:9 slot, no stretching */\n.project-image {\n  width: 100%;\n  aspect-ratio: 16 / 9;\n  height: auto;\n}\n.project-image img {\n  width: 100%;\n  height: 100%;\n  display: block;\n  object-fit: cover;\n  object-position: center;\n}\n\n/* Community */\n.community-links {\n  max-width: 850px;\n  margin: 0 auto 80px;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 18px;\n}\n.community-link {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 20px;\n  padding: 24px;\n  border: 1px solid var(--border);\n  color: var(--text);\n  text-decoration: none;\n  transition: .2s ease;\n}\n.community-link:hover {\n  border-color: #999;\n  transform: translateY(-2px);\n}\n.community-link strong {\n  display: block;\n  font-size: 20px;\n  margin-bottom: 6px;\n}\n.community-link small { color: var(--muted); }\n.supporters { max-width: 1100px; margin: 0 auto; }\n.supporters-heading { text-align: center; margin-bottom: 34px; }\n.supporters-heading h2 { font-size: 36px; margin: 10px 0; }\n.supporters-heading p { color: var(--muted); line-height: 1.6; }\n.members-list {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  border-top: 1px solid var(--border);\n  border-left: 1px solid var(--border);\n}\n.member {\n  padding: 17px 18px;\n  border-right: 1px solid var(--border);\n  border-bottom: 1px solid var(--border);\n  line-height: 1.4;\n  font-size: 14px;\n}\n.member:hover { background: #f7f7f7; }\n@media (max-width: 800px) {\n  .community-links { grid-template-columns: 1fr; }\n  .members-list { grid-template-columns: repeat(2, 1fr); }\n}\n@media (max-width: 480px) {\n  .members-list { grid-template-columns: 1fr; }\n}\n
+/* Final project artwork rules */
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  background: #111;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
